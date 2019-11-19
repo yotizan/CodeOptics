@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "915571422232",
+    "firebase_url": "https://yotizan-66fe3.firebaseio.com",
+    "project_id": "yotizan-66fe3",
+    "storage_bucket": "yotizan-66fe3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:915571422232:android:08f2841cbef27292997f6d",
+        "android_client_info": {
+          "package_name": "com.my.yotizan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "915571422232-6pnembtn1qqm7dnj796dskn82mb5g7fm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.my.yotizan",
+            "certificate_hash": "575e0cfe5710436220c2d33428bdef8479c8e727"
+          }
+        },
+        {
+          "client_id": "915571422232-p5aoedc7chtrm8189ffc00vv1tbe7qas.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDypzoH_939voYSXHWzii9g_wMVV1T18OA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "915571422232-p5aoedc7chtrm8189ffc00vv1tbe7qas.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
