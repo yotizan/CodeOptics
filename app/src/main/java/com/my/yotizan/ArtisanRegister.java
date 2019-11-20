@@ -33,10 +33,10 @@ public class ArtisanRegister extends AppCompatActivity {
         setContentView(R.layout.activity_client_register);
 
 
-        registerBtn = (Button)findViewById(R.id.btnSignUp);
-        emailField = (EditText)findViewById(R.id.txtEmail);
-        artisanPhoneNo = (EditText)findViewById(R.id.txtCellNo);
-        passwordField = (EditText)findViewById(R.id.txtPassword);
+        registerBtn = (Button)findViewById(R.id.btnSubmit);
+        emailField = (EditText)findViewById(R.id.txtArtisanEmail);
+        artisanPhoneNo = (EditText)findViewById(R.id.txtArtisanCell);
+        passwordField = (EditText)findViewById(R.id.txtArtisanPassword);
         gender = (EditText) findViewById(R.id.txtGender);
         identityNo = (EditText) findViewById(R.id.txtIdNumber);
 
