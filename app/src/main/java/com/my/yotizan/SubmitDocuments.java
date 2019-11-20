@@ -5,11 +5,11 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -43,7 +43,7 @@ public class SubmitDocuments extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_submit_documents);
 
         //Create Objects for Storage and Database
         storage = FirebaseStorage.getInstance();// Return an object of current firebase storage.
@@ -51,7 +51,7 @@ public class SubmitDocuments extends AppCompatActivity {
 
         //Create Objects for the Buttons
         selectFile = findViewById(R.id.selectFile);
-        upload = findViewById(R.id.uploadDocuments);
+        upload = findViewById(R.id.upload);
 
         //Create object for the textView
         notification = findViewById(R.id.notification);
@@ -72,6 +72,10 @@ public class SubmitDocuments extends AppCompatActivity {
                 }
             }
         });
+
+
+
+
 
         //Code for the Upload Button
         upload.setOnClickListener(new View.OnClickListener() {
@@ -161,23 +165,11 @@ public class SubmitDocuments extends AppCompatActivity {
             selectPDF();
         }
         else{
-            Toast.makeText(SubmitDocuments.this, "PLease provide permission",Toast.LENGTH_LONG).show();
+            Toast.makeText(SubmitDocuments.this, "Please provide permission",Toast.LENGTH_LONG).show();
         }
     }
 
-    private void selectPDF() {
 
-        //Our task will be to offer user to select a fie using file manager
-        //We will be using intents.
-
-        //Create an Intent Object
-        Intent intent = new Intent();
-        intent.setType("application/pdf");
-        intent.setAction(Intent.ACTION_GET_CONTENT);// To fetch files
-        startActivityForResult(intent,86);//Launch intent
-
-
-    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -194,4 +186,21 @@ public class SubmitDocuments extends AppCompatActivity {
             Toast.makeText(SubmitDocuments.this,"Please select a file", Toast.LENGTH_SHORT).show();
         }
     }
+
+
+    private void selectPDF() {
+
+        //Our task will be to offer user to select a fie using file manager
+        //We will be using intents.
+
+        //Create an Intent Object
+        Intent intent = new Intent();
+        intent.setType("application/pdf");
+        intent.setAction(Intent.ACTION_GET_CONTENT);// To fetch files
+        startActivityForResult(intent,86);//Launch intent
+
+
+    }
+
+
 }
