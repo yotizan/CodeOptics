@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ArtisanLogin"></activity>
+        <activity android:name=".SubmitDocuments"></activity>
+        <activity android:name=".ArtisanLogin" />
         <activity android:name=".ArtisanRegister" />
         <activity android:name=".ClientRegister" />
         <activity android:name=".HomeActivity" />
