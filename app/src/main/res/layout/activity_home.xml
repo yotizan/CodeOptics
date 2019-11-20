@@ -56,7 +56,7 @@
         android:id="@+id/profile_image"
         android:layout_width="249dp"
         android:layout_height="220dp"
-        android:src="@drawable/Logo"
+        android:src="@drawable/logo"
         app:civ_border_color="#3498db"
         app:civ_border_width="2dp"
         app:layout_constraintBottom_toTopOf="@+id/textView"
