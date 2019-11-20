@@ -22,7 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class ClientRegister extends AppCompatActivity {
     private Button registerBtn;
-    private EditText emailField, clientPhoneNo, passwordField, passwordConfirm;
+    private EditText emailField, clientPhoneNo, passwordField;
     private FirebaseAuth mAuth;
     private DatabaseReference mDatabase;
     private TextView loginTxtView;
@@ -37,7 +37,7 @@ public class ClientRegister extends AppCompatActivity {
         emailField = (EditText)findViewById(R.id.txtEmail);
         clientPhoneNo = (EditText)findViewById(R.id.txtCellNo);
         passwordField = (EditText)findViewById(R.id.txtPassword);
-        passwordConfirm = (EditText)findViewById(R.id.txtConfirmPassword);
+
         termsAndConditions = (CheckBox) findViewById(R.id.cbxConditions);
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference().child("Clients");
@@ -47,19 +47,19 @@ public class ClientRegister extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(ClientRegister.this, "SUBMITTING INFORMATION...", Toast.LENGTH_LONG).show();
                 final String Telephone = clientPhoneNo.getText().toString().trim();
-                final String PassConfirmation = passwordConfirm.getText().toString().trim();
+
                 final String email = emailField.getText().toString().trim();
                 final String password = passwordField.getText().toString().trim();
-                if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(PassConfirmation)&& !TextUtils.isEmpty(Telephone)&&!TextUtils.isEmpty(password)){
+                if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(Telephone)&&!TextUtils.isEmpty(password)){
                     mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             String user_id = mAuth.getCurrentUser().getUid();
                             DatabaseReference current_user_db = mDatabase.child(user_id);
                             current_user_db.child("CellPhone").setValue(Telephone);
-                            current_user_db.child("EmailAddress").setValue(password);
-                            current_user_db.child("Password").setValue(PassConfirmation);
-                            current_user_db.child("ConfirmPassword").setValue(email);
+                            current_user_db.child("EmailAddress").setValue(email);
+                            current_user_db.child("Password").setValue(password);
+
                             current_user_db.child("Address").setValue("Default");
                             Toast.makeText(ClientRegister.this, "Registeration Succesful", Toast.LENGTH_SHORT).show();
                             Intent regIntent = new Intent(ClientRegister.this, HomeActivity.class);
