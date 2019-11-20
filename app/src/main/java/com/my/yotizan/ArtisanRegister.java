@@ -30,7 +30,7 @@ public class ArtisanRegister extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_client_register);
+        setContentView(R.layout.activity_artisan_register);
 
 
         registerBtn = (Button)findViewById(R.id.btnSubmit);
@@ -40,15 +40,9 @@ public class ArtisanRegister extends AppCompatActivity {
         gender = (EditText) findViewById(R.id.txtGender);
         identityNo = (EditText) findViewById(R.id.txtIdNumber);
 
-        termsAndConditions = (CheckBox) findViewById(R.id.cbxConditions);
+        termsAndConditions = (CheckBox) findViewById(R.id.cbxArtisanConditions);
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference().child("Artisans");
-
-
-
-
-
-
 
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
