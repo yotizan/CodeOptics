@@ -1,42 +1,109 @@
 {
   "project_info": {
-    "project_number": "261781471735",
-    "firebase_url": "https://artizan-2f5d6.firebaseio.com",
-    "project_id": "artizan-2f5d6",
-    "storage_bucket": "artizan-2f5d6.appspot.com"
+    "project_number": "915571422232",
+    "firebase_url": "https://yotizan-66fe3.firebaseio.com",
+    "project_id": "yotizan-66fe3",
+    "storage_bucket": "yotizan-66fe3.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:261781471735:android:3500b0c170f01481026ef2",
+        "mobilesdk_app_id": "1:915571422232:android:08f2841cbef27292997f6d",
         "android_client_info": {
-          "package_name": "com.optics.artizan"
+          "package_name": "com.my.yotizan"
         }
       },
       "oauth_client": [
         {
-          "client_id": "261781471735-k0mdumd8f5nff5ahrjbujn5dacp77jhq.apps.googleusercontent.com",
+          "client_id": "915571422232-d76evssutca7emlp743dsn38p1kabpl9.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.optics.artizan",
+            "package_name": "com.my.yotizan",
+            "certificate_hash": "e00e38551b06ee813f57933683a8f73b62c02ce1"
+          }
+        },
+        {
+          "client_id": "915571422232-r103gbssv9i9947cnhgrc0jo0uq4sm46.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.my.yotizan",
+            "certificate_hash": "a61c8de87b74826c07a4c0c8f51691bc9f4e2560"
+          }
+        },
+        {
+          "client_id": "915571422232-5dug0jgpcv015i1480eocig5q4an7jsi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.my.yotizan",
             "certificate_hash": "ca51424403dc95cba3c846115471900239a0a0db"
           }
         },
         {
-          "client_id": "261781471735-ta9ican8ig6mgv5ujlt8g602kmb9k798.apps.googleusercontent.com",
+          "client_id": "915571422232-6pnembtn1qqm7dnj796dskn82mb5g7fm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.my.yotizan",
+            "certificate_hash": "575e0cfe5710436220c2d33428bdef8479c8e727"
+          }
+        },
+        {
+          "client_id": "915571422232-p5aoedc7chtrm8189ffc00vv1tbe7qas.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBaEz05fOxpv1QKLuWvjAzVFZvIkPee1eY"
+          "current_key": "AIzaSyDypzoH_939voYSXHWzii9g_wMVV1T18OA"
+        },
+        {
+          "current_key": "AIzaSyBwJjjqLKBrrCVUN1kPIXIrU7MZ_Uv-hxE"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "261781471735-ta9ican8ig6mgv5ujlt8g602kmb9k798.apps.googleusercontent.com",
+              "client_id": "915571422232-p5aoedc7chtrm8189ffc00vv1tbe7qas.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:915571422232:android:219940894a807062997f6d",
+        "android_client_info": {
+          "package_name": "com.optics.artizan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "915571422232-j6pcpohhn6ri3fke1i4oqsftu3tot1mb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.optics.artizan",
+            "certificate_hash": "e00e38551b06ee813f57933683a8f73b62c02ce1"
+          }
+        },
+        {
+          "client_id": "915571422232-p5aoedc7chtrm8189ffc00vv1tbe7qas.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDypzoH_939voYSXHWzii9g_wMVV1T18OA"
+        },
+        {
+          "current_key": "AIzaSyBwJjjqLKBrrCVUN1kPIXIrU7MZ_Uv-hxE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "915571422232-p5aoedc7chtrm8189ffc00vv1tbe7qas.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

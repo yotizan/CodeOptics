@@ -40,6 +40,17 @@
 
     </LinearLayout>
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="match_parent"
+        android:layout_height="221dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="false"
+        android:layout_marginTop="222dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/splash3"
+        app:civ_border_color="#FF000000" />
+
     <TextView
         android:id="@+id/txt_yotizan_app"
         android:layout_alignParentBottom="true"
