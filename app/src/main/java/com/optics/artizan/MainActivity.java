@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
+import dmax.dialog.SpotsDialog;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -24,6 +25,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.optics.artizan.Model.User;
 import com.rengwuxian.materialedittext.MaterialEditText;
+
+import dmax.dialog.SpotsDialog;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -88,6 +91,8 @@ public class MainActivity extends AppCompatActivity {
         dialog.setPositiveButton("SIGN IN", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+
+
                 dialog.dismiss();
 
 
@@ -104,13 +109,16 @@ public class MainActivity extends AppCompatActivity {
                 }
 
 
-
+                final android.app.AlertDialog waitingDialog = new SpotsDialog.Builder().setContext(MainActivity.this).build();
+                waitingDialog.show();
 
                 //Login
                 auth.signInWithEmailAndPassword(edtArtisanEmail.getText().toString(), edtPassword.getText().toString())
                         .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                             @Override
                             public void onSuccess(AuthResult authResult) {
+                                waitingDialog.dismiss();
+
                                     startActivity(new Intent(MainActivity.this, Welcome.class));
                                     finish();
                             }
